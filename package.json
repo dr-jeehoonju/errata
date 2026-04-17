@@ -1,0 +1,14 @@
+{
+  "name": "founders-errata",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Public, append-only, timestamped record of reversals in the founder's judgment.",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "validate": "python3 scripts/validate.py"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

@@ -1,0 +1,26 @@
+---
+title: The Founder's Errata
+permalink: /index.html
+---
+{% extends "base.njk" %}
+{% block content %}
+<h1>The Founder's Errata <span lang="ko" class="bi">/ 창업자 정오표</span></h1>
+
+<p>An <em>errata</em> is a formal notice of correction attached to a previously published work, so that the original and the correction are read together. This repository applies the convention to the judgments of a single founder, Dr. Jee Hoon Ju, concerning AetherHeal Co., Ltd. and adjacent work. Each entry records a specific reversal — a position once held, a position now held, and the cause of the change — and accumulates as an append-only public record over time.</p>
+
+{% if collections.entries and collections.entries.length %}
+<ol class="entries" reversed>
+  {% for entry in collections.entries | reverse %}
+  <li>
+    <span class="id">#{{ entry.data.id | padId }}</span>
+    <time datetime="{{ entry.data.date | isoDate }}">{{ entry.data.date | isoDate }}</time>
+    <a href="{{ entry.url | url }}">{{ entry.data.pageTitle }}</a>
+  </li>
+  {% endfor %}
+</ol>
+{% else %}
+<p><em>No entries yet.</em></p>
+{% endif %}
+
+<p class="back"><a href="https://jeehoonju.com/">&larr; jeehoonju.com</a></p>
+{% endblock %}

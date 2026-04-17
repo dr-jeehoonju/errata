@@ -1,0 +1,16 @@
+{% extends "base.njk" %}
+{% block content %}
+<nav><a href="{{ '/' | url }}">&larr; All entries</a></nav>
+<article>
+  <header>
+    <p>
+      <time datetime="{{ date | isoDate }}">{{ date | isoDate }}</time>
+      &middot; Entry {{ id | padId }}
+      {% if status and status != "active" %} &middot; {{ status }}{% endif %}
+      {% if supersedes %} &middot; supersedes #{{ supersedes | padId }}{% endif %}
+      {% if superseded_by %} &middot; superseded by #{{ superseded_by | padId }}{% endif %}
+    </p>
+  </header>
+  {{ content | safe }}
+</article>
+{% endblock %}

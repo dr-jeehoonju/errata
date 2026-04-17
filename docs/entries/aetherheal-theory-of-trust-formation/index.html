@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Founder&#39;s Errata</title>
+<style>
+  body {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    max-width: 42.5em;
+    margin: 3em auto;
+    padding: 0 1em;
+    color: #111;
+    background: #fff;
+    line-height: 1.65;
+  }
+  a { color: #000; }
+  a:hover { text-decoration: none; }
+  h1, h2, h3 { font-weight: normal; line-height: 1.3; }
+  h1 { font-size: 1.5em; margin-top: 0; }
+  h1 .bi { color: #666; font-size: 0.85em; }
+  h2 { font-size: 1.15em; margin-top: 2em; }
+  h3 { font-size: 1em; font-style: italic; }
+  p { margin: 0.9em 0; }
+  hr { border: 0; border-top: 1px solid #ddd; margin: 2.2em 0; }
+  ol.entries { list-style: none; padding: 0; margin: 2.2em 0; }
+  ol.entries li {
+    margin: 0.55em 0;
+    display: grid;
+    grid-template-columns: 3.5em 6.5em 1fr;
+    gap: 0.6em;
+    align-items: baseline;
+  }
+  ol.entries .id { color: #666; font-variant-numeric: tabular-nums; }
+  time { color: #666; font-variant-numeric: tabular-nums; }
+  nav { margin-bottom: 1.8em; font-size: 0.9em; }
+  article header { margin-bottom: 1.5em; color: #555; font-size: 0.95em; }
+  p.back { margin-top: 3em; padding-top: 1.2em; border-top: 1px solid #ddd; font-size: 0.9em; }
+  @media (max-width: 32em) {
+    ol.entries li { grid-template-columns: auto auto; grid-template-rows: auto auto; }
+    ol.entries li a { grid-column: 1 / -1; }
+  }
+</style>
+</head>
+<body>
+
+<nav><a href="/errata/">&larr; All entries</a></nav>
+<article>
+  <header>
+    <p>
+      <time datetime="2026-04-17">2026-04-17</time>
+      &middot; Entry 0001
+      
+      
+      
+    </p>
+  </header>
+  <h1>AetherHeal's theory of trust formation</h1>
+<h2>Prior Position</h2>
+<p>AetherHeal was originally designed around a conventional two-sided platform thesis. The operating model was: identify the best clinics in Korea, attract the top 20% of the international patient market by socioeconomic segment, charge a percentage of procedure cost as the platform's revenue, and use early volume to attract additional high-quality clinics, which would in turn attract more patients. Trust, in this model, was a consequence of scale — the platform would become trustworthy because it had aggregated quality supply and premium demand, and the aggregation itself would serve as the signal.</p>
+<p>This thesis assumed that the core problem in medical tourism was coordination — bringing the right patients to the right clinics — and that a well-executed platform could solve it by virtue of being well-executed.</p>
+<h2>Current Position</h2>
+<p>AetherHeal is designed around a different thesis: trust is a consequence of structure, not of scale. The platform's function is to construct a mechanism in which no participant earns more by recommending worse options for the patient, and in which that property is verifiable from the outside. Once this structure exists, good clinics self-select into participation because the architecture distinguishes them from clinics whose business model depends on information asymmetry. Patients are not segmented by socioeconomic tier; segmentation happens through the demand created by the structure itself.</p>
+<p>The percentage-fee model is structurally incompatible with this thesis and has been replaced throughout the system by flat fees — fixed annual hospital verification fees by tier, flat patient navigation fees by service tier, and fixed Angel Physician stipends. No revenue anywhere in AetherHeal scales with procedure cost.</p>
+<h2>Causal Update</h2>
+<p>The shift happened on or around 10 March 2026, while working through Akerlof's 1970 paper <em>The Market for Lemons</em> as part of ongoing reading on market design and asymmetric information.</p>
+<p>Akerlof's argument is that when buyers cannot distinguish quality and sellers can, the market drives quality out — good sellers exit because they cannot credibly signal quality at a price the market will bear, and the remaining market is populated by lower-quality sellers trading at prices that reflect average rather than true quality. The mechanism is not malice; it is the structural consequence of information asymmetry in the absence of reliable signals.</p>
+<p>Applied to international medical tourism, the implication was immediate and uncomfortable. The medical tourism market is an Akerlof market. Patients cannot evaluate clinical quality directly. Price is the only legible signal, and price correlates poorly with quality, so the signal is noise. Good clinics, being unable to credibly distinguish themselves, operate at a margin compressed by the presence of lower-quality clinics charging similar prices. Patients, being unable to identify good clinics, select on price or on marketing sophistication, both of which are uncorrelated or inversely correlated with clinical quality. This is the structure that produced my own failed hair transplant — I chose on price because I had no other signal, and I only recognized the failure after becoming a specialist capable of evaluating what had been done to me.</p>
+<p>The original AetherHeal thesis did not solve this problem. It relocated it. A platform that aggregates clinics and patients, charges a percentage of procedure cost, and targets the top 20% of the market is still operating in an Akerlof market, and is still subject to its dynamics. Worse, the percentage-fee structure gives the platform an incentive gradient toward higher-cost options — the same incentive gradient that distorts clinic-side recommendations in the existing market. Even if the platform never consciously acts on this gradient, the gradient exists, which means the platform cannot be a credible trust-producing entity. It can only be a more polished version of the problem it claims to solve.</p>
+<p>The corrective insight from Akerlof was not that information asymmetry is a problem — this was already known — but that the solution to an Akerlof market is not better signaling within the existing structure. It is the construction of a new structural mechanism that makes quality legible independent of price, and that removes the incentive to misrepresent quality from every actor in the system. This is what Hurwicz, Myerson, and Roth formalize as mechanism design. The correct response to the lemons problem is not to scale within the broken market; it is to build a mechanism in which the lemons dynamic cannot operate.</p>
+<p>Flat fees remove the platform's incentive gradient. Standardized verification with public rejection rates makes quality legible. Patient-satisfaction-based partial refund of navigation fees places the platform's compensation at risk on outcomes rather than on transactions. Independent external physician advisory boards prevent regulatory capture of the verification function. Together, these are not design preferences; they are the structural preconditions for trust to form in a market that otherwise cannot produce it.</p>
+<p>The deeper update is about the order of operations. My prior thesis treated trust as an output of a well-executed platform; my current thesis treats trust as an input that the platform's architecture must produce before any transactions are legitimate. This is the distinction that separates AetherHeal from a medical tourism broker. The reversal recorded here is the moment the distinction became architecturally binding rather than aspirational.</p>
+<hr>
+<p><em>This entry is part of The Founder's Errata. Entries are append-only and are never deleted or rewritten. Corrections to this entry, if any, will appear as new entries that reference this one by ID.</em></p>
+
+</article>
+
+</body>
+</html>
